@@ -2,8 +2,12 @@
 touch ~/.bash_profile
 
 # install brew + cask + cask versions
+# and some other needed utils
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 brew tap caskroom/cask
 brew tap caskroom/versions
+brew install git
+brew install python3
 
 # some apps I've gotten used to 
 brew cask install iterm2-nightly
@@ -17,7 +21,4 @@ curl -o- https://raw.githubusercontent.com/creationix/nvm/master/install.sh | ba
 # neovim
 brew tap neovim/neovim
 brew install --HEAD neovim # for pyhon installation, check
-			   # :help nvim-pyton
-			   # I opted for python 3 only thus far
-brew install python3 # python3 for neovim
 pip3 install neovim # neovim bindings I assume?
