@@ -4,6 +4,7 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'tpope/vim-fugitive'
   Plug 'ctrlpvim/ctrlp.vim'
   Plug 'editorconfig/editorconfig-vim'
+  Plug 'tpope/vim-vinegar'
 
   " colortheme
   Plug 'chriskempson/base16-vim'
@@ -28,11 +29,14 @@ set showtabline=2
 " https://github.com/editorconfig/editorconfig-vim#excluded-patterns
 let g:EditorConfig_exclude_patterns = ['fugitive://.*']
 
+" tree view in netre
+let g:netrw_liststyle=3
+
 " CtrlP settings
 let g:ctrlp_show_hidden = 1
 let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\v[\/](git|hg|svn|node_modules)$'
-  \ }
+  \ 'dir':  '\v[\/](git|hg|svn|node_modules)$',
+  \ 'file': '^\.git' }
 
 " this is to get themes working
 set background=dark
