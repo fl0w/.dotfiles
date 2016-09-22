@@ -12,6 +12,7 @@ brew install keybase
 
 # tmux
 brew install tmux --HEAD
+brew install reattach-to-user-namespace
 
 # neovim
 brew tap neovim/neovim
